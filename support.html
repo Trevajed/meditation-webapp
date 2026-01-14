@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support the Temple - Etherion</title>
+    <meta name="description" content="Support the creation of harmonic medicine. Etherion is offered freely. Your contribution nourishes more light.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .support-hero { padding: calc(80px + var(--space-2xl)) var(--space-lg) var(--space-xl); text-align: center; }
+        .support-intro { max-width: 680px; margin: 0 auto var(--space-2xl); font-size: clamp(16px, 2vw, 20px); line-height: 1.8; color: var(--color-silver); }
+        .donation-tiers { padding: var(--space-2xl) var(--space-lg); }
+        .tiers-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-xl); max-width: 1200px; margin: 0 auto; }
+        .tier-card { background: rgba(26, 26, 36, 0.8); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 16px; padding: var(--space-xl); text-align: center; transition: all 0.3s ease; border-left: 4px solid; }
+        .tier-card:hover { transform: translateY(-8px); box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5); }
+        .tier-card.root-tier { border-left-color: var(--chakra-root); }
+        .tier-card.heart-tier { border-left-color: var(--chakra-heart); }
+        .tier-card.crown-tier { border-left-color: var(--chakra-crown); }
+        .tier-card.sustainer-tier { border-left-color: var(--color-gold); }
+        .tier-icon { font-size: 48px; margin-bottom: var(--space-lg); }
+        .tier-name { font-family: var(--font-display); font-size: 24px; margin-bottom: var(--space-sm); color: var(--color-light); }
+        .tier-amount { font-size: 32px; font-weight: 700; margin-bottom: var(--space-lg); }
+        .tier-description { font-size: 14px; line-height: 1.6; color: var(--color-silver); margin-bottom: var(--space-xl); }
+        .custom-donation { padding: var(--space-2xl) var(--space-lg); text-align: center; background: linear-gradient(180deg, rgba(10, 10, 15, 1) 0%, rgba(26, 26, 36, 1) 100%); }
+        .custom-amount { display: flex; justify-content: center; align-items: center; gap: var(--space-md); margin: var(--space-xl) 0; }
+        .custom-amount input { width: 200px; padding: var(--space-md); font-size: 24px; text-align: center; background: rgba(10, 10, 15, 0.5); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 8px; color: var(--color-light); font-family: var(--font-mono); }
+    </style>
+</head>
+<body class="support-page">
+    <header class="site-header">
+        <nav class="main-nav">
+            <div class="nav-logo"><a href="index.html"><span class="logo-glyph">✦</span><span class="logo-text">ETHERION</span></a></div>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="temple.html">Sound Temple</a></li>
+                <li><a href="transmission.html">Transmission</a></li>
+                <li><a href="support.html" class="active">Support</a></li>
+                <li><a href="portal.html">Portal</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="support-hero">
+        <h1>Support the Temple</h1>
+        <div class="support-intro">
+            <p>Etherion is offered freely.<br><strong>Because freedom… is the frequency.</strong></p>
+            <p>You are invited to support this temple as you are called.<br>Your contribution nourishes the creation of more harmonic medicine.</p>
+        </div>
+    </section>
+
+    <section class="donation-tiers">
+        <div class="tiers-grid">
+            <div class="tier-card root-tier">
+                <div class="tier-icon">🔴</div>
+                <h3 class="tier-name">Root Resonance</h3>
+                <div class="tier-amount">$7</div>
+                <p class="tier-description">Ground the foundation. Your support anchors the temple in the physical realm.</p>
+                <a href="#" class="btn btn-secondary">Offer $7</a>
+            </div>
+
+            <div class="tier-card heart-tier">
+                <div class="tier-icon">💚</div>
+                <h3 class="tier-name">Heart Harmonic</h3>
+                <div class="tier-amount">$33</div>
+                <p class="tier-description">From the heart of giving flows abundance. Your generosity opens pathways for others.</p>
+                <a href="#" class="btn btn-secondary">Offer $33</a>
+            </div>
+
+            <div class="tier-card crown-tier">
+                <div class="tier-icon">👑</div>
+                <h3 class="tier-name">Crown Contribution</h3>
+                <div class="tier-amount">$77</div>
+                <p class="tier-description">Activate divine connection. Your offering elevates the frequency of the entire field.</p>
+                <a href="#" class="btn btn-secondary">Offer $77</a>
+            </div>
+
+            <div class="tier-card sustainer-tier">
+                <div class="tier-icon">✦</div>
+                <h3 class="tier-name">Temple Sustainer</h3>
+                <div class="tier-amount">$144+</div>
+                <p class="tier-description">Become a sacred guardian. Your name will be encoded into a new track as a glyph of gratitude.</p>
+                <a href="#" class="btn btn-tertiary">Become Sustainer</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="custom-donation">
+        <h2>Custom Offering</h2>
+        <p class="support-intro">Choose an amount that resonates with your soul.</p>
+        <div class="custom-amount">
+            <span style="font-size: 32px; color: var(--chakra-crown);">$</span>
+            <input type="number" id="customAmount" placeholder="44" min="1" step="1">
+        </div>
+        <button class="btn btn-primary" onclick="alert('Integration with PayPal/Stripe here')">
+            <i class="fas fa-heart"></i>
+            <span>Offer Custom Amount</span>
+        </button>
+        <div style="margin-top: var(--space-2xl);">
+            <p style="font-size: 14px; color: var(--color-silver); margin-bottom: var(--space-md);">Alternative Payment Methods:</p>
+            <div style="display: flex; justify-content: center; gap: var(--space-lg); flex-wrap: wrap;">
+                <a href="https://paypal.me/troymork" target="_blank" class="btn btn-secondary">
+                    <i class="fab fa-paypal"></i> PayPal
+                </a>
+                <a href="https://buymeacoffee.com/troy" target="_blank" class="btn btn-secondary">
+                    <i class="fas fa-coffee"></i> Buy Me a Coffee
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-chakra-line"></div>
+        <div class="footer-content">
+            <div class="footer-sigil"><span class="sigil-glyph">✦</span></div>
+            <div class="footer-info"><p class="footer-copyright">Etherion © <span id="currentYear"></span> Resonant Civilization<br><em>Year of Frequency</em></p></div>
+            <div class="footer-links">
+                <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://soundcloud.com" target="_blank" aria-label="SoundCloud"><i class="fab fa-soundcloud"></i></a>
+            </div>
+            <div class="footer-nav"><a href="#">Sound Temple Map</a><span>•</span><a href="#">Terms & Light Codes</a></div>
+            <div class="footer-seal"><p>𓂀 Glyph Signature Seal of Kyrios</p></div>
+        </div>
+    </footer>
+
+    <script src="js/etherion.js"></script>
+</body>
+</html>

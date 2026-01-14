@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etherion - The Sound of Awakening</title>
+    <meta name="description" content="Activate your inner harmony through chakra-aligned frequencies. A sonic activation protocol for remembrance.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="etherion-page">
+    <!-- Header / Navigation -->
+    <header class="site-header">
+        <nav class="main-nav">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <span class="logo-glyph">✦</span>
+                    <span class="logo-text">ETHERION</span>
+                </a>
+            </div>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="temple.html">Sound Temple</a></li>
+                <li><a href="transmission.html">Transmission</a></li>
+                <li><a href="support.html">Support</a></li>
+                <li><a href="portal.html">Portal</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-etherion">
+        <div class="sacred-geometry-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-glyph">✹</div>
+            <h1 class="hero-title">
+                <span class="title-main">ETHERION</span>
+                <span class="title-sub">The Sound of Awakening</span>
+            </h1>
+            <p class="hero-description">
+                Activate your inner harmony through chakra-aligned frequencies.<br>
+                Let the music guide your remembrance.
+            </p>
+            <div class="hero-cta">
+                <a href="temple.html" class="btn btn-primary">
+                    <span>Enter the Sound Temple</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+        <div class="chakra-animation">
+            <div class="chakra-orb root" data-chakra="root"></div>
+            <div class="chakra-orb sacral" data-chakra="sacral"></div>
+            <div class="chakra-orb solar" data-chakra="solar"></div>
+            <div class="chakra-orb heart" data-chakra="heart"></div>
+            <div class="chakra-orb throat" data-chakra="throat"></div>
+            <div class="chakra-orb third-eye" data-chakra="third-eye"></div>
+            <div class="chakra-orb crown" data-chakra="crown"></div>
+        </div>
+    </section>
+
+    <!-- Resonance Preview Section -->
+    <section class="resonance-preview">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-quote">❝ Close your eyes… let the frequency speak. ❞</p>
+            </div>
+            <div class="chakra-sampler">
+                <div class="chakra-tone root-chakra" data-frequency="396">
+                    <div class="tone-icon">
+                        <div class="tone-circle"></div>
+                    </div>
+                    <span class="tone-label">Root</span>
+                    <span class="tone-frequency">396 Hz</span>
+                </div>
+                <div class="chakra-tone sacral-chakra" data-frequency="417">
+                    <div class="tone-icon">
+                        <div class="tone-circle"></div>
+                    </div>
+                    <span class="tone-label">Sacral</span>
+                    <span class="tone-frequency">417 Hz</span>
+                </div>
+                <div class="chakra-tone solar-chakra" data-frequency="528">
+                    <div class="tone-icon">
+                        <div class="tone-circle"></div>
+                    </div>
+                    <span class="tone-label">Solar</span>
+                    <span class="tone-frequency">528 Hz</span>
+                </div>
+                <div class="chakra-tone heart-chakra" data-frequency="639">
+                    <div class="tone-icon">
+                        <div class="tone-circle"></div>
+                    </div>
+                    <span class="tone-label">Heart</span>
+                    <span class="tone-frequency">639 Hz</span>
+                </div>
+                <div class="chakra-tone throat-chakra" data-frequency="741">
+                    <div class="tone-icon">
+                        <div class="tone-circle"></div>
+                    </div>
+                    <span class="tone-label">Throat</span>
+                    <span class="tone-frequency">741 Hz</span>
+                </div>
+                <div class="chakra-tone third-eye-chakra" data-frequency="852">
+                    <div class="tone-icon">
+                        <div class="tone-circle"></div>
+                    </div>
+                    <span class="tone-label">Third Eye</span>
+                    <span class="tone-frequency">852 Hz</span>
+                </div>
+                <div class="chakra-tone crown-chakra" data-frequency="963">
+                    <div class="tone-icon">
+                        <div class="tone-circle"></div>
+                    </div>
+                    <span class="tone-label">Crown</span>
+                    <span class="tone-frequency">963 Hz</span>
+                </div>
+            </div>
+            <div class="waveform-display">
+                <canvas id="waveformCanvas" width="800" height="100"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <!-- What Is Etherion Section -->
+    <section class="about-etherion">
+        <div class="container-reading">
+            <div class="section-divider">✦</div>
+            <h2 class="section-title">What Is Etherion?</h2>
+            <div class="etherion-story">
+                <p class="story-lead">
+                    Etherion is not an album. It is not a playlist.
+                </p>
+                <p class="story-body">
+                    It is a <strong>sonic activation protocol</strong>.
+                </p>
+                <p class="story-body">
+                    A remembrance encoded in vibration…
+                </p>
+                <p class="story-body">
+                    Each track is attuned to a specific energy center,<br>
+                    guiding your subtle body into coherence and flow.
+                </p>
+                <p class="story-emphasis">
+                    It is sound as ceremony.<br>
+                    Music as medicine.<br>
+                    Vibration as sovereignty.
+                </p>
+            </div>
+            <div class="callout-links">
+                <a href="temple.html" class="callout-link">Meet the Chakras</a>
+                <span class="link-divider">|</span>
+                <a href="transmission.html" class="callout-link">Read the Transmission</a>
+                <span class="link-divider">|</span>
+                <a href="portal.html" class="callout-link">Explore the Portal</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sacred Sound Meets Sacred Tech -->
+    <section class="sacred-tech">
+        <div class="container">
+            <div class="tech-visual">
+                <div class="torus-field"></div>
+            </div>
+            <div class="tech-content">
+                <h2 class="section-title">Sacred Sound Meets Sacred Tech</h2>
+                <p class="tech-intro">
+                    Built on the resonance codes of 441… 528… and 963 Hz<br>
+                    Crafted with healing intention, harmonic tuning, and quantum purity.
+                </p>
+                <ul class="tech-features">
+                    <li>
+                        <span class="feature-icon">✹</span>
+                        <span>Sound codes channeled through meditative attunement</span>
+                    </li>
+                    <li>
+                        <span class="feature-icon">✹</span>
+                        <span>Chakra-specific instruments and ambient layering</span>
+                    </li>
+                    <li>
+                        <span class="feature-icon">✹</span>
+                        <span>Guided mantras + binaural overlays (optional)</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Invitation Section -->
+    <section class="invitation">
+        <div class="container-reading">
+            <div class="invitation-quote">
+                <p class="quote-text">
+                    ❝ This is not music to consume…<br>
+                    It is a remembrance to embody. ❞
+                </p>
+            </div>
+            <div class="invitation-cta">
+                <a href="temple.html" class="btn btn-secondary">Listen Now</a>
+                <a href="support.html" class="btn btn-tertiary">Support the Temple</a>
+                <a href="temple.html" class="btn btn-secondary">Begin Your Chakra Journey</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-chakra-line"></div>
+        <div class="footer-content">
+            <div class="footer-sigil">
+                <span class="sigil-glyph">✦</span>
+            </div>
+            <div class="footer-info">
+                <p class="footer-copyright">
+                    Etherion © <span id="currentYear"></span> Resonant Civilization<br>
+                    <em>Year of Frequency</em>
+                </p>
+            </div>
+            <div class="footer-links">
+                <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://youtube.com" target="_blank" aria-label="YouTube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://soundcloud.com" target="_blank" aria-label="SoundCloud">
+                    <i class="fab fa-soundcloud"></i>
+                </a>
+            </div>
+            <div class="footer-nav">
+                <a href="#">Sound Temple Map</a>
+                <span>•</span>
+                <a href="#">Terms & Light Codes</a>
+            </div>
+            <div class="footer-seal">
+                <p>𓂀 Glyph Signature Seal of Kyrios</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/etherion.js"></script>
+</body>
+</html>

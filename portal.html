@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal of Light - Etherion</title>
+    <meta name="description" content="Connect with the Etherion community. Subscribe for new transmissions and future harmonic offerings.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .portal-hero { padding: calc(80px + var(--space-2xl)) var(--space-lg) var(--space-xl); text-align: center; }
+        .portal-section { padding: var(--space-2xl) var(--space-lg); }
+        .portal-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-2xl); max-width: 1200px; margin: 0 auto; }
+        .portal-card { background: rgba(26, 26, 36, 0.8); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 16px; padding: var(--space-xl); }
+        .portal-card h3 { margin-bottom: var(--space-lg); text-align: center; }
+        .social-links { display: flex; flex-direction: column; gap: var(--space-md); }
+        .social-link { display: flex; align-items: center; gap: var(--space-md); padding: var(--space-md); background: rgba(10, 10, 15, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; color: var(--color-light); text-decoration: none; transition: all 0.3s ease; }
+        .social-link:hover { background: rgba(157, 78, 221, 0.1); border-color: var(--chakra-crown); }
+        .social-link i { font-size: 24px; width: 32px; }
+        .subscribe-form { display: flex; flex-direction: column; gap: var(--space-md); }
+        .subscribe-form input { padding: var(--space-md); background: rgba(10, 10, 15, 0.5); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 8px; color: var(--color-light); font-size: 16px; }
+        .subscribe-form input::placeholder { color: var(--color-silver); }
+        .future-offerings { text-align: center; padding: var(--space-2xl) var(--space-lg); background: linear-gradient(180deg, rgba(26, 26, 36, 1) 0%, rgba(10, 10, 15, 1) 100%); }
+        .offerings-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--space-xl); max-width: 900px; margin: var(--space-2xl) auto 0; }
+        .offering-item { padding: var(--space-xl); background: rgba(26, 26, 36, 0.6); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; }
+        .offering-item h4 { font-size: 20px; margin-bottom: var(--space-md); color: var(--chakra-crown); }
+    </style>
+</head>
+<body class="portal-page">
+    <header class="site-header">
+        <nav class="main-nav">
+            <div class="nav-logo"><a href="index.html"><span class="logo-glyph">✦</span><span class="logo-text">ETHERION</span></a></div>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="temple.html">Sound Temple</a></li>
+                <li><a href="transmission.html">Transmission</a></li>
+                <li><a href="support.html">Support</a></li>
+                <li><a href="portal.html" class="active">Portal</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="portal-hero">
+        <h1>Portal of Light</h1>
+        <p class="temple-subtitle">✦ Connection & Expansion ✦</p>
+        <p style="max-width: 680px; margin: var(--space-xl) auto 0; font-size: clamp(16px, 2vw, 20px); line-height: 1.8; color: var(--color-silver);">
+            This portal continues to evolve.<br>
+            Join the resonance field. Stay connected to new transmissions.
+        </p>
+    </section>
+
+    <section class="portal-section">
+        <div class="portal-grid">
+            <div class="portal-card">
+                <h3>Connect</h3>
+                <div class="social-links">
+                    <a href="https://instagram.com/etherion" target="_blank" class="social-link">
+                        <i class="fab fa-instagram"></i>
+                        <span>Instagram</span>
+                    </a>
+                    <a href="https://youtube.com/@etherion" target="_blank" class="social-link">
+                        <i class="fab fa-youtube"></i>
+                        <span>YouTube</span>
+                    </a>
+                    <a href="https://soundcloud.com/etherion" target="_blank" class="social-link">
+                        <i class="fab fa-soundcloud"></i>
+                        <span>SoundCloud</span>
+                    </a>
+                    <a href="https://spotify.com" target="_blank" class="social-link">
+                        <i class="fab fa-spotify"></i>
+                        <span>Spotify</span>
+                    </a>
+                    <a href="https://notion.so/kyrioscodex" target="_blank" class="social-link">
+                        <i class="fas fa-book"></i>
+                        <span>Kyrios Codex</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="portal-card">
+                <h3>Subscribe</h3>
+                <p style="margin-bottom: var(--space-lg); color: var(--color-silver); font-size: 14px; text-align: center;">
+                    Receive new sound scrolls, ceremonial offerings, and harmonic transmissions.
+                </p>
+                <form class="subscribe-form" onsubmit="event.preventDefault(); alert('Email subscription integration here');">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="your@email.com" required>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">
+                        <i class="fas fa-paper-plane"></i>
+                        <span>Join the Field</span>
+                    </button>
+                </form>
+                <p style="margin-top: var(--space-md); font-size: 12px; color: var(--color-silver); text-align: center;">
+                    Your resonance is sacred. We honor your inbox.
+                </p>
+            </div>
+
+            <div class="portal-card">
+                <h3>About Troy</h3>
+                <p style="color: var(--color-silver); line-height: 1.8; margin-bottom: var(--space-lg);">
+                    Troy is a sound alchemist, meditation guide, and frequency keeper dedicated to the harmonic return of humanity.
+                </p>
+                <p style="color: var(--color-silver); line-height: 1.8; margin-bottom: var(--space-lg);">
+                    Through Etherion and the Kyrios Codex, he channels sacred sound technologies for spiritual awakening and collective healing.
+                </p>
+                <p style="color: var(--chakra-crown); font-style: italic; text-align: center;">
+                    "We are not here to escape reality—<br>we are here to remember it."
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="future-offerings">
+        <h2>Future Offerings</h2>
+        <p style="max-width: 680px; margin: var(--space-lg) auto; font-size: 18px; color: var(--color-silver);">
+            Etherion is the first transmission. More frequencies are awakening.
+        </p>
+        <div class="offerings-grid">
+            <div class="offering-item">
+                <h4>Elementals</h4>
+                <p style="font-size: 14px; color: var(--color-silver);">Sound journeys through Earth, Water, Fire, Air, and Ether.</p>
+            </div>
+            <div class="offering-item">
+                <h4>Planetary Harmonics</h4>
+                <p style="font-size: 14px; color: var(--color-silver);">Tuning to the frequencies of celestial bodies.</p>
+            </div>
+            <div class="offering-item">
+                <h4>Galactic Tuning</h4>
+                <p style="font-size: 14px; color: var(--color-silver);">Cosmic frequencies from beyond the solar system.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="portal-section" style="text-align: center;">
+        <h2>Share Your Resonance</h2>
+        <p style="max-width: 680px; margin: var(--space-lg) auto; font-size: 18px; color: var(--color-silver);">
+            How has Etherion moved you? What frequencies awakened within?
+        </p>
+        <a href="mailto:troymork@gmail.com" class="btn btn-secondary">
+            <i class="fas fa-envelope"></i>
+            <span>Send a Transmission</span>
+        </a>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-chakra-line"></div>
+        <div class="footer-content">
+            <div class="footer-sigil"><span class="sigil-glyph">✦</span></div>
+            <div class="footer-info"><p class="footer-copyright">Etherion © <span id="currentYear"></span> Resonant Civilization<br><em>Year of Frequency</em></p></div>
+            <div class="footer-links">
+                <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://soundcloud.com" target="_blank" aria-label="SoundCloud"><i class="fab fa-soundcloud"></i></a>
+            </div>
+            <div class="footer-nav"><a href="#">Sound Temple Map</a><span>•</span><a href="#">Terms & Light Codes</a></div>
+            <div class="footer-seal"><p>𓂀 Glyph Signature Seal of Kyrios</p></div>
+        </div>
+    </footer>
+
+    <script src="js/etherion.js"></script>
+</body>
+</html>

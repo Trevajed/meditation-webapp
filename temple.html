@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple of Sound - Etherion</title>
+    <meta name="description" content="The seven chakra activation tracks of Etherion. Each tone is a transmission.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/temple.css">
+</head>
+<body class="temple-page">
+    <!-- Header / Navigation -->
+    <header class="site-header">
+        <nav class="main-nav">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <span class="logo-glyph">✦</span>
+                    <span class="logo-text">ETHERION</span>
+                </a>
+            </div>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="temple.html" class="active">Sound Temple</a></li>
+                <li><a href="transmission.html">Transmission</a></li>
+                <li><a href="support.html">Support</a></li>
+                <li><a href="portal.html">Portal</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="temple-hero">
+        <div class="container-reading">
+            <div class="temple-intro">
+                <h1>The Temple of Sound</h1>
+                <p class="temple-subtitle">✦ Chakra Activation Interface ✦</p>
+                <p class="temple-description">
+                    Each chakra is a doorway. Each track is a key.<br>
+                    Touch the sphere to awaken the frequency within.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chakra Spine Interface -->
+    <section class="chakra-spine-section">
+        <div class="container">
+            <div class="chakra-spine">
+                <!-- Crown Chakra -->
+                <div class="chakra-node crown-node" data-chakra="crown">
+                    <div class="node-connector"></div>
+                    <div class="node-sphere">
+                        <div class="sphere-inner"></div>
+                        <div class="sphere-glow"></div>
+                    </div>
+                    <div class="node-label">
+                        <span class="chakra-name">Crown</span>
+                        <span class="chakra-sanskrit">Sahasrāra</span>
+                    </div>
+                </div>
+
+                <!-- Third Eye Chakra -->
+                <div class="chakra-node third-eye-node" data-chakra="third-eye">
+                    <div class="node-connector"></div>
+                    <div class="node-sphere">
+                        <div class="sphere-inner"></div>
+                        <div class="sphere-glow"></div>
+                    </div>
+                    <div class="node-label">
+                        <span class="chakra-name">Third Eye</span>
+                        <span class="chakra-sanskrit">Ājñā</span>
+                    </div>
+                </div>
+
+                <!-- Throat Chakra -->
+                <div class="chakra-node throat-node" data-chakra="throat">
+                    <div class="node-connector"></div>
+                    <div class="node-sphere">
+                        <div class="sphere-inner"></div>
+                        <div class="sphere-glow"></div>
+                    </div>
+                    <div class="node-label">
+                        <span class="chakra-name">Throat</span>
+                        <span class="chakra-sanskrit">Viśuddha</span>
+                    </div>
+                </div>
+
+                <!-- Heart Chakra -->
+                <div class="chakra-node heart-node" data-chakra="heart">
+                    <div class="node-connector"></div>
+                    <div class="node-sphere">
+                        <div class="sphere-inner"></div>
+                        <div class="sphere-glow"></div>
+                    </div>
+                    <div class="node-label">
+                        <span class="chakra-name">Heart</span>
+                        <span class="chakra-sanskrit">Anāhata</span>
+                    </div>
+                </div>
+
+                <!-- Solar Plexus Chakra -->
+                <div class="chakra-node solar-node" data-chakra="solar">
+                    <div class="node-connector"></div>
+                    <div class="node-sphere">
+                        <div class="sphere-inner"></div>
+                        <div class="sphere-glow"></div>
+                    </div>
+                    <div class="node-label">
+                        <span class="chakra-name">Solar Plexus</span>
+                        <span class="chakra-sanskrit">Maṇipūra</span>
+                    </div>
+                </div>
+
+                <!-- Sacral Chakra -->
+                <div class="chakra-node sacral-node" data-chakra="sacral">
+                    <div class="node-connector"></div>
+                    <div class="node-sphere">
+                        <div class="sphere-inner"></div>
+                        <div class="sphere-glow"></div>
+                    </div>
+                    <div class="node-label">
+                        <span class="chakra-name">Sacral</span>
+                        <span class="chakra-sanskrit">Svādhiṣṭhāna</span>
+                    </div>
+                </div>
+
+                <!-- Root Chakra -->
+                <div class="chakra-node root-node" data-chakra="root">
+                    <div class="node-connector"></div>
+                    <div class="node-sphere">
+                        <div class="sphere-inner"></div>
+                        <div class="sphere-glow"></div>
+                    </div>
+                    <div class="node-label">
+                        <span class="chakra-name">Root</span>
+                        <span class="chakra-sanskrit">Mūlādhāra</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chakra Detail Modal -->
+    <div class="chakra-modal" id="chakraModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose" aria-label="Close modal">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <div class="modal-header">
+                <div class="modal-sphere">
+                    <div class="sphere-inner"></div>
+                </div>
+                <h2 class="modal-title" id="modalTitle">Chakra Name</h2>
+                <p class="modal-sanskrit" id="modalSanskrit">Sanskrit Name</p>
+                <p class="modal-frequency" id="modalFrequency">528 Hz</p>
+            </div>
+
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modalImage" src="" alt="Chakra visualization">
+                </div>
+
+                <div class="modal-description">
+                    <h3>Resonance</h3>
+                    <p id="modalTheme" class="chakra-theme"></p>
+                    <p id="modalDescription" class="chakra-description"></p>
+                </div>
+
+                <div class="modal-player">
+                    <h3>Sound Portal</h3>
+                    <div class="audio-player">
+                        <button class="play-btn" id="playBtn" aria-label="Play">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <div class="player-info">
+                            <div class="track-title" id="trackTitle">Track Title</div>
+                            <div class="player-timeline">
+                                <span class="time-current" id="timeCurrent">0:00</span>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="progressFill"></div>
+                                    <input type="range" class="progress-slider" id="progressSlider" min="0" max="100" value="0">
+                                </div>
+                                <span class="time-duration" id="timeDuration">0:00</span>
+                            </div>
+                        </div>
+                        <div class="player-controls">
+                            <button class="volume-btn" id="volumeBtn" aria-label="Mute">
+                                <i class="fas fa-volume-up"></i>
+                            </button>
+                            <input type="range" class="volume-slider" id="volumeSlider" min="0" max="100" value="70">
+                        </div>
+                    </div>
+                    <audio id="audioPlayer" preload="metadata"></audio>
+                </div>
+
+                <div class="modal-actions">
+                    <a href="#" class="btn btn-primary download-btn" id="downloadBtn" download>
+                        <i class="fas fa-download"></i>
+                        <span>Receive the Track</span>
+                    </a>
+                </div>
+
+                <div class="modal-light-language">
+                    <h3>Light Language Glyph</h3>
+                    <div class="glyph-container">
+                        <p id="glyphMeaning" class="glyph-meaning"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Full Chakra Journey Section -->
+    <section class="full-journey">
+        <div class="container-reading">
+            <div class="section-divider">✦</div>
+            <h2>Experience the Full Journey</h2>
+            <p class="journey-description">
+                Listen to all seven chakras in sequence for a complete activation.<br>
+                Root to Crown. Earth to Sky. Matter to Spirit.
+            </p>
+            <div class="journey-cta">
+                <button class="btn btn-primary" id="playAllBtn">
+                    <i class="fas fa-play-circle"></i>
+                    <span>Play Full Sequence</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-chakra-line"></div>
+        <div class="footer-content">
+            <div class="footer-sigil">
+                <span class="sigil-glyph">✦</span>
+            </div>
+            <div class="footer-info">
+                <p class="footer-copyright">
+                    Etherion © <span id="currentYear"></span> Resonant Civilization<br>
+                    <em>Year of Frequency</em>
+                </p>
+            </div>
+            <div class="footer-links">
+                <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://youtube.com" target="_blank" aria-label="YouTube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://soundcloud.com" target="_blank" aria-label="SoundCloud">
+                    <i class="fab fa-soundcloud"></i>
+                </a>
+            </div>
+            <div class="footer-nav">
+                <a href="#">Sound Temple Map</a>
+                <span>•</span>
+                <a href="#">Terms & Light Codes</a>
+            </div>
+            <div class="footer-seal">
+                <p>𓂀 Glyph Signature Seal of Kyrios</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/chakra-data.js"></script>
+    <script src="js/temple.js"></script>
+    <script src="js/etherion.js"></script>
+</body>
+</html>
