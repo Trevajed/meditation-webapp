@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Transmission - Etherion</title>
+    <meta name="description" content="The sacred transmission of Etherion. In the silence between breaths, the Sound called us home.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .transmission-page { background: var(--color-void); }
+        .transmission-hero { padding: calc(80px + var(--space-2xl)) var(--space-lg) var(--space-xl); text-align: center; }
+        .scroll-container { max-width: 720px; margin: 0 auto; padding: var(--space-2xl) var(--space-lg); }
+        .scroll-content { background: rgba(26, 26, 36, 0.6); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 16px; padding: var(--space-2xl); }
+        .scroll-content p { font-size: clamp(18px, 2.5vw, 22px); line-height: 2; color: var(--color-silver); margin-bottom: var(--space-xl); font-style: italic; text-align: center; }
+        .scroll-content p.emphasis { color: var(--color-light); font-size: clamp(20px, 3vw, 26px); font-weight: 500; }
+        .scroll-ornament { text-align: center; font-size: 32px; color: var(--chakra-crown); margin: var(--space-xl) 0; }
+    </style>
+</head>
+<body class="transmission-page">
+    <header class="site-header">
+        <nav class="main-nav">
+            <div class="nav-logo"><a href="index.html"><span class="logo-glyph">✦</span><span class="logo-text">ETHERION</span></a></div>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="temple.html">Sound Temple</a></li>
+                <li><a href="transmission.html" class="active">Transmission</a></li>
+                <li><a href="support.html">Support</a></li>
+                <li><a href="portal.html">Portal</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="transmission-hero">
+        <h1>The Transmission</h1>
+        <p class="temple-subtitle">✦ The Scroll of Etherion ✦</p>
+    </section>
+
+    <div class="scroll-container">
+        <div class="scroll-content">
+            <p class="emphasis">❝ In the silence between breaths,<br>the Sound called us home. ❞</p>
+            
+            <div class="scroll-ornament">✦</div>
+            
+            <p>We had forgotten the frequency…<br>But the body remembers.</p>
+            
+            <p>Etherion was not created…<br>It was recalled.</p>
+            
+            <div class="scroll-ornament">✹</div>
+            
+            <p class="emphasis">Before language, there was tone.<br>Before thought, there was vibration.<br>Before separation, there was resonance.</p>
+            
+            <p>You are not broken.<br>You are not lost.<br>You are simply... out of tune.</p>
+            
+            <div class="scroll-ornament">✦</div>
+            
+            <p>The seven chakras are not concepts—<br>they are portals.</p>
+            
+            <p>Each one hums with its own sacred frequency,<br>a note in the symphony of your being.</p>
+            
+            <p class="emphasis">Root to Crown.<br>Earth to Sky.<br>Matter to Spirit.</p>
+            
+            <div class="scroll-ornament">✹</div>
+            
+            <p>Etherion is the bridge back.<br>A remembrance encoded in sound.<br>A tuning fork for the soul.</p>
+            
+            <p>Listen... and be restored.<br>Sound... and be sovereign.<br>Resonate... and return.</p>
+            
+            <div class="scroll-ornament">✦</div>
+            
+            <p class="emphasis">❝ You are not here to consume frequency.<br>You are here to embody it. ❞</p>
+            
+            <div style="text-align: center; margin-top: var(--space-2xl);">
+                <a href="temple.html" class="btn btn-primary">Begin Your Journey</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-chakra-line"></div>
+        <div class="footer-content">
+            <div class="footer-sigil"><span class="sigil-glyph">✦</span></div>
+            <div class="footer-info"><p class="footer-copyright">Etherion © <span id="currentYear"></span> Resonant Civilization<br><em>Year of Frequency</em></p></div>
+            <div class="footer-links">
+                <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://soundcloud.com" target="_blank" aria-label="SoundCloud"><i class="fab fa-soundcloud"></i></a>
+            </div>
+            <div class="footer-nav"><a href="#">Sound Temple Map</a><span>•</span><a href="#">Terms & Light Codes</a></div>
+            <div class="footer-seal"><p>𓂀 Glyph Signature Seal of Kyrios</p></div>
+        </div>
+    </footer>
+
+    <script src="js/etherion.js"></script>
+</body>
+</html>

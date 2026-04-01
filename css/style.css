@@ -1,0 +1,998 @@
+/* ✦ ETHERION VISUAL STYLE GUIDE
+   Sacred Aesthetics for the Sound Temple Interface
+   Design Philosophy: Sacred minimalism meets quantum luminosity
+================================================== */
+
+/* ========================================
+   CSS VARIABLES - Root Configuration
+======================================== */
+:root {
+  /* Chakra Colors */
+  --chakra-root: #8B0000;
+  --chakra-sacral: #FF6B35;
+  --chakra-solar: #FFD23F;
+  --chakra-heart: #06A77D;
+  --chakra-throat: #4169E1;
+  --chakra-third-eye: #4B0082;
+  --chakra-crown: #9D4EDD;
+  
+  /* Base Palette */
+  --color-void: #0A0A0F;
+  --color-mist: #1A1A24;
+  --color-light: #FAFAFA;
+  --color-silver: #B8B8C8;
+  --color-gold: #C9A961;
+  
+  /* Spacing Scale (8px base) */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 48px;
+  --space-2xl: 96px;
+  
+  /* Typography */
+  --font-display: 'Cinzel', serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+  
+  /* Layout */
+  --container-max: 1200px;
+  --reading-max: 680px;
+}
+
+/* ========================================
+   RESET & BASE STYLES
+======================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-void);
+  color: var(--color-light);
+  line-height: 1.7;
+  letter-spacing: 0.02em;
+  overflow-x: hidden;
+}
+
+/* Motion Preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ========================================
+   TYPOGRAPHY
+======================================== */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 300;
+  line-height: 1.2;
+  margin-bottom: var(--space-lg);
+}
+
+h1 {
+  font-size: clamp(48px, 8vw, 72px);
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: clamp(32px, 6vw, 48px);
+  letter-spacing: -0.01em;
+}
+
+h3 {
+  font-size: clamp(24px, 4vw, 32px);
+  font-weight: 500;
+}
+
+p {
+  margin-bottom: 1.5em;
+  max-width: var(--reading-max);
+}
+
+strong {
+  font-weight: 600;
+}
+
+em {
+  font-style: italic;
+  color: var(--color-silver);
+}
+
+/* ========================================
+   LAYOUT CONTAINERS
+======================================== */
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+
+.container-reading {
+  max-width: var(--reading-max);
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+
+/* ========================================
+   HEADER & NAVIGATION
+======================================== */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(10, 10, 15, 0.9);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background 0.3s ease;
+}
+
+.site-header.scrolled {
+  background: rgba(10, 10, 15, 0.95);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
+}
+
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-lg) var(--space-xl);
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.nav-logo a {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  text-decoration: none;
+  color: var(--color-light);
+  transition: color 0.3s ease;
+}
+
+.logo-glyph {
+  font-size: 24px;
+  color: var(--chakra-crown);
+}
+
+.logo-text {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+.nav-logo a:hover .logo-glyph {
+  animation: chakra-pulse 1.5s ease-in-out infinite;
+}
+
+.nav-links {
+  display: flex;
+  gap: var(--space-xl);
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--color-silver);
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--chakra-crown), var(--chakra-throat));
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--color-light);
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 2px;
+  background: var(--color-light);
+  transition: all 0.3s ease;
+}
+
+/* ========================================
+   HERO SECTION - ETHERION
+======================================== */
+.hero-etherion {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--space-2xl) var(--space-lg);
+  overflow: hidden;
+  background: radial-gradient(circle at 50% 50%, rgba(157, 78, 221, 0.15) 0%, rgba(10, 10, 15, 1) 70%);
+}
+
+.sacred-geometry-overlay {
+  position: absolute;
+  inset: 0;
+  background-image: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.02)" stroke-width="0.5"/><circle cx="50" cy="50" r="30" fill="none" stroke="rgba(255,255,255,0.02)" stroke-width="0.5"/><circle cx="50" cy="50" r="20" fill="none" stroke="rgba(255,255,255,0.02)" stroke-width="0.5"/></svg>');
+  opacity: 0.3;
+  mix-blend-mode: screen;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  max-width: 800px;
+}
+
+.hero-glyph {
+  font-size: 48px;
+  color: var(--chakra-crown);
+  margin-bottom: var(--space-lg);
+  animation: chakra-pulse 3s ease-in-out infinite;
+}
+
+.hero-title {
+  margin-bottom: var(--space-xl);
+}
+
+.title-main {
+  display: block;
+  font-size: clamp(56px, 10vw, 96px);
+  font-weight: 300;
+  letter-spacing: 0.15em;
+  background: linear-gradient(135deg, var(--chakra-crown), var(--chakra-throat), var(--chakra-heart));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: var(--space-md);
+}
+
+.title-sub {
+  display: block;
+  font-size: clamp(20px, 3vw, 28px);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--color-silver);
+  letter-spacing: 0.05em;
+}
+
+.hero-description {
+  font-size: clamp(16px, 2vw, 20px);
+  line-height: 1.8;
+  color: var(--color-silver);
+  margin-bottom: var(--space-2xl);
+}
+
+.hero-cta {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-lg);
+}
+
+/* Chakra Animation in Hero */
+.chakra-animation {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 500px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.chakra-orb {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.6;
+  animation: chakra-pulse 3s ease-in-out infinite;
+}
+
+.chakra-orb::before {
+  content: '';
+  position: absolute;
+  inset: -10px;
+  border-radius: 50%;
+  background: inherit;
+  filter: blur(20px);
+  opacity: 0.5;
+}
+
+.chakra-orb.root {
+  background: var(--chakra-root);
+  bottom: 0;
+  animation-delay: 0s;
+}
+
+.chakra-orb.sacral {
+  background: var(--chakra-sacral);
+  bottom: 80px;
+  animation-delay: 0.2s;
+}
+
+.chakra-orb.solar {
+  background: var(--chakra-solar);
+  bottom: 160px;
+  animation-delay: 0.4s;
+}
+
+.chakra-orb.heart {
+  background: var(--chakra-heart);
+  bottom: 240px;
+  animation-delay: 0.6s;
+}
+
+.chakra-orb.throat {
+  background: var(--chakra-throat);
+  bottom: 320px;
+  animation-delay: 0.8s;
+}
+
+.chakra-orb.third-eye {
+  background: var(--chakra-third-eye);
+  bottom: 400px;
+  animation-delay: 1s;
+}
+
+.chakra-orb.crown {
+  background: var(--chakra-crown);
+  bottom: 480px;
+  animation-delay: 1.2s;
+}
+
+@keyframes chakra-pulse {
+  0%, 100% {
+    opacity: 0.6;
+    transform: translateX(-50%) scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(-50%) scale(1.1);
+  }
+}
+
+/* ========================================
+   BUTTONS
+======================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-md) var(--space-xl);
+  border-radius: 8px;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--chakra-crown), var(--chakra-throat));
+  color: var(--color-light);
+  box-shadow: 0 8px 24px rgba(157, 78, 221, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 12px 32px rgba(157, 78, 221, 0.5);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-light);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(8px);
+}
+
+.btn-secondary:hover {
+  border-color: var(--chakra-crown);
+  background: rgba(157, 78, 221, 0.1);
+}
+
+.btn-tertiary {
+  background: linear-gradient(135deg, var(--chakra-heart), var(--chakra-solar));
+  color: var(--color-light);
+  box-shadow: 0 8px 24px rgba(6, 167, 125, 0.3);
+}
+
+.btn-tertiary:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 12px 32px rgba(6, 167, 125, 0.5);
+}
+
+/* ========================================
+   RESONANCE PREVIEW SECTION
+======================================== */
+.resonance-preview {
+  padding: var(--space-2xl) var(--space-lg);
+  background: linear-gradient(180deg, rgba(10, 10, 15, 1) 0%, rgba(26, 26, 36, 1) 100%);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+}
+
+.section-quote {
+  font-size: clamp(18px, 3vw, 24px);
+  font-style: italic;
+  color: var(--color-silver);
+  font-family: var(--font-display);
+}
+
+.chakra-sampler {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: var(--space-xl);
+  margin-bottom: var(--space-2xl);
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.chakra-tone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.chakra-tone:hover {
+  transform: scale(1.1);
+}
+
+.tone-icon {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tone-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.root-chakra .tone-circle {
+  background: var(--chakra-root);
+  box-shadow: 0 0 20px rgba(139, 0, 0, 0.5);
+}
+
+.sacral-chakra .tone-circle {
+  background: var(--chakra-sacral);
+  box-shadow: 0 0 20px rgba(255, 107, 53, 0.5);
+}
+
+.solar-chakra .tone-circle {
+  background: var(--chakra-solar);
+  box-shadow: 0 0 20px rgba(255, 210, 63, 0.5);
+}
+
+.heart-chakra .tone-circle {
+  background: var(--chakra-heart);
+  box-shadow: 0 0 20px rgba(6, 167, 125, 0.5);
+}
+
+.throat-chakra .tone-circle {
+  background: var(--chakra-throat);
+  box-shadow: 0 0 20px rgba(65, 105, 225, 0.5);
+}
+
+.third-eye-chakra .tone-circle {
+  background: var(--chakra-third-eye);
+  box-shadow: 0 0 20px rgba(75, 0, 130, 0.5);
+}
+
+.crown-chakra .tone-circle {
+  background: var(--chakra-crown);
+  box-shadow: 0 0 20px rgba(157, 78, 221, 0.5);
+}
+
+.chakra-tone:hover .tone-circle {
+  transform: scale(1.15);
+  box-shadow: 0 0 40px currentColor;
+  animation: chakra-pulse 1.5s ease-in-out infinite;
+}
+
+.tone-label {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-light);
+}
+
+.tone-frequency {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--color-silver);
+}
+
+.waveform-display {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-xl);
+}
+
+#waveformCanvas {
+  width: 100%;
+  max-width: 800px;
+  height: 100px;
+  border-radius: 8px;
+  background: rgba(26, 26, 36, 0.5);
+}
+
+/* ========================================
+   ABOUT ETHERION SECTION
+======================================== */
+.about-etherion {
+  padding: var(--space-2xl) var(--space-lg);
+  background: var(--color-void);
+  text-align: center;
+}
+
+.section-divider {
+  font-size: 32px;
+  color: var(--chakra-crown);
+  margin-bottom: var(--space-xl);
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+.etherion-story {
+  margin-bottom: var(--space-2xl);
+}
+
+.story-lead {
+  font-size: clamp(20px, 3vw, 24px);
+  line-height: 1.6;
+  color: var(--color-light);
+  margin: 0 auto var(--space-lg);
+}
+
+.story-body {
+  font-size: clamp(18px, 2.5vw, 22px);
+  line-height: 1.8;
+  color: var(--color-silver);
+  margin: 0 auto var(--space-md);
+}
+
+.story-emphasis {
+  font-size: clamp(18px, 2.5vw, 22px);
+  font-style: italic;
+  line-height: 2;
+  color: var(--color-light);
+  margin: var(--space-xl) auto 0;
+}
+
+.callout-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.callout-link {
+  color: var(--chakra-crown);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.callout-link:hover {
+  color: var(--chakra-throat);
+}
+
+.link-divider {
+  color: var(--color-silver);
+}
+
+/* ========================================
+   SACRED TECH SECTION
+======================================== */
+.sacred-tech {
+  padding: var(--space-2xl) var(--space-lg);
+  background: linear-gradient(180deg, rgba(26, 26, 36, 1) 0%, rgba(10, 10, 15, 1) 100%);
+}
+
+.sacred-tech .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2xl);
+  align-items: center;
+}
+
+.tech-visual {
+  position: relative;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.torus-field {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(157, 78, 221, 0.3) 0%, transparent 70%);
+  border: 2px solid rgba(157, 78, 221, 0.5);
+  animation: torus-rotation 20s linear infinite;
+  position: relative;
+}
+
+.torus-field::before,
+.torus-field::after {
+  content: '';
+  position: absolute;
+  inset: 20px;
+  border-radius: 50%;
+  border: 1px solid rgba(157, 78, 221, 0.3);
+}
+
+.torus-field::after {
+  inset: 40px;
+}
+
+@keyframes torus-rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.tech-content h2 {
+  margin-bottom: var(--space-lg);
+}
+
+.tech-intro {
+  font-size: 18px;
+  line-height: 1.8;
+  color: var(--color-silver);
+  margin-bottom: var(--space-xl);
+}
+
+.tech-features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.tech-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.feature-icon {
+  color: var(--chakra-crown);
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+/* ========================================
+   INVITATION SECTION
+======================================== */
+.invitation {
+  padding: var(--space-2xl) var(--space-lg);
+  background: var(--color-void);
+  text-align: center;
+}
+
+.invitation-quote {
+  margin-bottom: var(--space-2xl);
+}
+
+.quote-text {
+  font-size: clamp(22px, 3.5vw, 32px);
+  font-family: var(--font-display);
+  font-style: italic;
+  line-height: 1.8;
+  color: var(--color-silver);
+}
+
+.invitation-cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-lg);
+  flex-wrap: wrap;
+}
+
+/* ========================================
+   FOOTER
+======================================== */
+.site-footer {
+  background: var(--color-mist);
+  padding: var(--space-2xl) var(--space-lg) var(--space-xl);
+  position: relative;
+}
+
+.footer-chakra-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, 
+    var(--chakra-root) 0%,
+    var(--chakra-sacral) 16.67%,
+    var(--chakra-solar) 33.33%,
+    var(--chakra-heart) 50%,
+    var(--chakra-throat) 66.67%,
+    var(--chakra-third-eye) 83.33%,
+    var(--chakra-crown) 100%
+  );
+}
+
+.footer-content {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xl);
+  text-align: center;
+}
+
+.footer-sigil {
+  font-size: 48px;
+  color: var(--chakra-crown);
+}
+
+.footer-copyright {
+  color: var(--color-silver);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.footer-links {
+  display: flex;
+  gap: var(--space-xl);
+}
+
+.footer-links a {
+  color: var(--color-silver);
+  font-size: 24px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--chakra-crown);
+  transform: scale(1.2);
+}
+
+.footer-nav {
+  display: flex;
+  gap: var(--space-md);
+  align-items: center;
+}
+
+.footer-nav a {
+  color: var(--color-silver);
+  text-decoration: none;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+  color: var(--color-light);
+}
+
+.footer-seal {
+  font-size: 16px;
+  color: var(--color-gold);
+  font-family: var(--font-display);
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
+@media (max-width: 1024px) {
+  .sacred-tech .container {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+  
+  .tech-visual {
+    height: 300px;
+  }
+  
+  .torus-field {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-nav {
+    padding: var(--space-md) var(--space-lg);
+  }
+  
+  .nav-links {
+    position: fixed;
+    top: 70px;
+    right: -100%;
+    width: 250px;
+    height: calc(100vh - 70px);
+    background: rgba(26, 26, 36, 0.98);
+    backdrop-filter: blur(16px);
+    flex-direction: column;
+    padding: var(--space-xl);
+    transition: right 0.3s ease;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .nav-links.active {
+    right: 0;
+  }
+  
+  .menu-toggle {
+    display: flex;
+  }
+  
+  .menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+  }
+  
+  .chakra-sampler {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: var(--space-lg);
+  }
+  
+  .chakra-animation {
+    width: 200px;
+    height: 350px;
+  }
+  
+  .chakra-orb {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .chakra-orb.sacral { bottom: 60px; }
+  .chakra-orb.solar { bottom: 120px; }
+  .chakra-orb.heart { bottom: 180px; }
+  .chakra-orb.throat { bottom: 240px; }
+  .chakra-orb.third-eye { bottom: 300px; }
+  .chakra-orb.crown { bottom: 360px; }
+  
+  .invitation-cta {
+    flex-direction: column;
+  }
+  
+  .btn {
+    width: 100%;
+    max-width: 300px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --space-2xl: 48px;
+  }
+  
+  h1 {
+    font-size: 36px;
+  }
+  
+  h2 {
+    font-size: 28px;
+  }
+  
+  .hero-etherion {
+    min-height: 80vh;
+    padding: var(--space-xl) var(--space-lg);
+  }
+  
+  .chakra-sampler {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .tone-icon {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .tone-circle {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+/* ========================================
+   ACCESSIBILITY
+======================================== */
+:focus-visible {
+  outline: 2px solid var(--chakra-crown);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
